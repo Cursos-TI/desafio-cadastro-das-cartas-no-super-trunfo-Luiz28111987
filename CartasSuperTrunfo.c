@@ -9,48 +9,85 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    char estado;
-    char codigo_carta[4];
-    char cidade[50];
-    int populacao;
-    float area;
-    float pib;
-    int numero_pontos_turisticos;
+    // Declaração de variáveis para a primeira carta
+    char estado1;
+    char codigo1[4];
+    char nomeCidade1[50];
+    int populacao1;
+    float area1;
+    float pib1;
+    int pontosTuristicos1;
+
+    // Declaração de variáveis para a segunda carta
+    char estado2;
+    char codigo2[4];
+    char nomeCidade2[50];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontosTuristicos2;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    printf("Digite o estado: ");
-    scanf("%c", &estado);
+    // Entrada de dados para a primeira carta
+    printf("Cadastro da Carta 1:\n");
+    printf("Estado (A-H): ");
+    scanf(" %c", &estado1);
+    printf("Codigo da Carta (ex: A01): ");
+    scanf(" %s", codigo1);
+    printf("Nome da Cidade: ");
+    scanf(" %s", &nomeCidade1);
+    printf("Populacao: ");
+    scanf(" %d", &populacao1);
+    printf("Area (em km2): ");
+    scanf(" %f", &area1);
+    printf("PIB (em bilhoes de reais): ");
+    scanf(" %f", &pib1);
+    printf("Numero de Pontos Turisticos: ");
+    scanf(" %d", &pontosTuristicos1);
+    printf("\n");
 
-    printf("Digite o codigo da carta: ");
-    scanf(" %s", codigo_carta);
-    
-    printf("Digite o nome da cidade: ");
-    scanf(" %s", cidade);
-
-    printf("Digite a populacao: ");
-    scanf("%d", &populacao);
-
-    printf("Digite a area em KM2: ");
-    scanf("%f", &area);
-
-    printf("Digite o valor do PIB: ");
-    scanf("%f", &pib);
-
-    printf("Digite o numero de pontos turisticos: ");
-    scanf("%d", &numero_pontos_turisticos);
+    // Entrada de dados para a segunda carta
+    printf("Cadastro da Carta 2:\n");
+    printf("Estado (A-H): ");
+    scanf(" %c", &estado2);
+    printf("Codigo da Carta (ex: B02): ");
+    scanf(" %s", codigo2);
+    printf("Nome da Cidade: ");
+    scanf(" %s", &nomeCidade2);
+    printf("Populacao: ");
+    scanf(" %d", &populacao2);
+    printf("Area (em km2): ");
+    scanf(" %f", &area2);
+    printf("PIB (em bilhoes de reais): ");
+    scanf(" %f", &pib2);
+    printf("Numero de Pontos Turisticos: ");
+    scanf(" %d", &pontosTuristicos2);
+    printf("\n");
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("\n===== Dados da Carta Cadastrada =====\n");
-    printf("Codigo da carta: %s\n",codigo_carta);
-    printf("Nome da cidade: %s\n",cidade);
-    printf("Populacao da cidade: %d\n", populacao);
-    printf("Area por KM2: %.2f\n", area);
-    printf("PIB da populacao: %.2f\n", pib);
-    printf("Numero de pontos turisticos: %d\n", numero_pontos_turisticos);
+    // Exibição das cartas cadastradas
+    printf("Carta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Codigo: %s\n", codigo1);
+    printf("Nome da Cidade: %s\n", nomeCidade1);
+    printf("Populacao: %d\n", populacao1);
+    printf("Area: %.2f km2\n", area1);
+    printf("PIB: %.2f bilhoes de reais\n", pib1);
+    printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
+    printf("\n");
+
+    printf("Carta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Codigo: %s\n", codigo2);
+    printf("Nome da Cidade: %s\n", nomeCidade2);
+    printf("Populacao: %d\n", populacao2);
+    printf("Area: %.2f km2\n", area2);
+    printf("PIB: %.2f bilhoes de reais\n", pib2);
+    printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
 
     return 0;
 }
